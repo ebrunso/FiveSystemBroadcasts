@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnSendMultiBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Multi Broadcast"
+        android:onClick="onClick"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvBroadcastTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total # of System Broadcasts"
+        app:layout_constraintTop_toBottomOf="@+id/btnSendMultiBroadcast"
+        app:layout_constraintEnd_toEndOf="@id/btnSendMultiBroadcast"/>
+
+    <TextView
+        android:id="@+id/tvBroadcastOne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Broadcast One"
+        app:layout_constraintTop_toBottomOf="@+id/tvBroadcastTotal"
+        app:layout_constraintEnd_toEndOf="@id/tvBroadcastTotal"/>
+
+    <TextView
+        android:id="@+id/tvBroadcastTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Broadcast Two"
+        app:layout_constraintTop_toBottomOf="@+id/tvBroadcastOne"
+        app:layout_constraintEnd_toEndOf="@id/tvBroadcastOne"/>
+
+    <TextView
+        android:id="@+id/tvBroadcastThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Broadcast Three"
+        app:layout_constraintTop_toBottomOf="@+id/tvBroadcastTwo"
+        app:layout_constraintEnd_toEndOf="@id/tvBroadcastTwo"/>
+
+    <TextView
+        android:id="@+id/tvBroadcastFour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Broadcast Four"
+        app:layout_constraintTop_toBottomOf="@+id/tvBroadcastThree"
+        app:layout_constraintEnd_toEndOf="@id/tvBroadcastThree"/>
+
+    <TextView
+        android:id="@+id/tvBroadcastFive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Broadcast Five"
+        app:layout_constraintTop_toBottomOf="@+id/tvBroadcastFour"
+        app:layout_constraintEnd_toEndOf="@id/tvBroadcastFour"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
