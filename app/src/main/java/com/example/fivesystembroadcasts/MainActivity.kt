@@ -27,6 +27,14 @@ class MainActivity : AppCompatActivity(), ReceiverCallback  {
         setContentView(R.layout.activity_main)
 
         intentFilter.addAction("broadcast")
+
+        buttonStart.setOnClickListener(View.OnClickListener {
+            ForegroundService.startService(this, "Foreground Service is running...")
+        })
+        buttonStop.setOnClickListener(View.OnClickListener {
+            ForegroundService.stopService(this)
+        })
+
     }
 
     override fun onStart(){
@@ -68,6 +76,11 @@ class MainActivity : AppCompatActivity(), ReceiverCallback  {
                 intent = Intent("broadcast")
                 intent.putExtra("KEY", enteredString)
                 LocalBroadcastManager.getInstance(this).sendBroadcast(intent)
+            }
+            R.id.btnStartIntentService -> {
+                val intent = Intent(this, IntentPopulateRV::class.java)
+                intent.action = ACTION_POPULATE_LIST
+                startService(intent)
             }
         }
     }
